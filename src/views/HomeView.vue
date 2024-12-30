@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-y-scroll">
+  <div>
     <Header />
     <HeroSection />
     <About />
@@ -9,14 +9,13 @@
   </div>
 </template>
 
-
 <script>
-import Header from '@/components/Header.vue';
-import HeroSection from '@/components/HeroSection.vue';
-import About from '@/components/About.vue';
-import Porto from '@/components/Porto.vue';
-import Documentation from '@/components/Documentation.vue';
-import Footer from '@/components/Footer.vue';
+import Header from "@/components/Header.vue";
+import HeroSection from "@/components/HeroSection.vue";
+import About from "@/components/About.vue";
+import Porto from "@/components/Porto.vue";
+import Documentation from "@/components/Documentation.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
@@ -25,14 +24,13 @@ export default {
     About,
     Porto,
     Documentation,
-    Footer
+    Footer,
   },
-  data() {
-  },
+  data() {},
   methods: {
     learnMore() {
-      alert('Thank you for your interest!');
-    }
-  }
+      alert("Thank you for your interest!");
+    },
+  },
 };
 </script>

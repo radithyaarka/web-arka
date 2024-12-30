@@ -1,5 +1,7 @@
 <template>
   <div>
+
+    <Journey />
     <!-- Hero Section -->
     <section
       class="hero bg-primary h-screen flex items-center justify-center text-white text-center"
@@ -113,6 +115,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/swiper-bundle.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Journey from "../components/Journey.vue";
 import Porto from "@/components/Porto.vue";
 
 import itwImage from "@/assets/itw.png";
@@ -125,6 +128,7 @@ export default {
     Swiper,
     SwiperSlide,
     Porto,
+    Journey,
   },
   data() {
     return {
