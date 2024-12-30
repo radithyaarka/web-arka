@@ -89,10 +89,10 @@
 
     <div
       v-if="isModalOpen"
-      class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+      class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-20"
     >
       <div
-        class="bg-white p-6 rounded-lg shadow-lg w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3"
+        class="bg-white p-6 rounded-lg shadow-lg w-11/12 sm:w-2/3 md:w-1/2 lg:w-1/3 z-30"
       >
         <h2 class="text-2xl font-bold mb-4">Secret Key</h2>
         <input

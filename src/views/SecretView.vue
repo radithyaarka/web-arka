@@ -1,23 +1,24 @@
 <template>
-  <div>
-
-    <Journey />
+  <div class="bg-custom">
     <!-- Hero Section -->
     <section
-      class="hero bg-primary h-screen flex items-center justify-center text-white text-center"
+      class="hero bg-none h-screen flex items-center justify-center text-white text-center"
     >
-      <div class="container mx-auto">
+      <div class="container mx-auto glass-card">
         <h1 class="text-5xl font-semibold mb-4">Welcome to Our Gallery</h1>
         <p class="text-lg mb-6">
           Explore the beautiful memories we have captured.
         </p>
       </div>
     </section>
+    <transition data-aos="fade-up">
+      <Journey />
+    </transition>
 
     <!-- Locked Section -->
     <section
       id="locked"
-      class="bg-primary h-screen flex items-center justify-center text-white text-center relative"
+      class="h-screen flex items-center justify-center text-white text-center relative"
     >
       <div class="container mx-auto">
         <h2 class="text-3xl font-semibold mb-4">Unlock the Gallery</h2>
@@ -72,12 +73,9 @@
 
     <!-- Gallery Section -->
     <transition name="gallery-fade" data-aos="fade-up">
-      <Porto v-if="isGalleryUnlocked" />
-    </transition>
-    <transition name="gallery-fade" data-aos="fade-up">
-      <div v-if="isGalleryUnlocked" class="bg-white py-6" id="gallery">
+      <div v-if="isGalleryUnlocked" class="bg-none py-6" id="gallery">
         <div class="container mx-auto text-center">
-          <h2 class="text-primary text-3xl font-semibold mb-6">Our Memories</h2>
+          <h2 class="text-white text-3xl font-semibold mb-6">Our Memories</h2>
           <div class="relative">
             <swiper
               :slides-per-view="3"
@@ -208,6 +206,12 @@ export default {
 </script>
 
 <style scoped>
+.bg-custom {
+  background-image: url("@/assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Optional: membuat elemen setinggi viewport */
+}
 /* Hero section styles */
 .hero {
   background-size: cover;
@@ -222,7 +226,6 @@ export default {
 
 /* Locked section styles */
 #locked {
-  background-color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,11 +246,6 @@ export default {
 .gallery-fade-enter,
 .gallery-fade-leave-to {
   opacity: 0;
-}
-
-/* Gallery section styles */
-.bg-white {
-  background-color: white;
 }
 
 .bg-primary {
@@ -317,7 +315,6 @@ img {
 
 /* Locked section styles */
 #locked {
-  background-color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,4 +397,23 @@ img {
   width: 16px; /* Ukuran gambar hati */
   height: 16px;
 }
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent color */
+  backdrop-filter: blur(10px); /* Blur effect on the background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Transparent border */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 8px 32px rgba(255, 205, 210, 0.37); /* Updated shadow color to #FFCDD2 */
+  padding: 2rem; /* Padding inside the card */
+  transition: all 0.3s ease-in-out;
+  position: relative; /* Set relative position */
+  z-index: 0; /* Ensure the background is behind the content */
+  height: 170px; /* Set fixed height */
+  width: 100%; /* Make the width flexible */
+  max-width: 800px; /* Set a max width for better responsiveness */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center horizontally */
+}
+
 </style>
