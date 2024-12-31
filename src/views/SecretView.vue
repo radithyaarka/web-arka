@@ -36,14 +36,12 @@
           </button>
         </div>
         <div class="mt-8">
-          <!-- Progress Bar -->
           <div class="progress-bar-wrapper">
             <div class="w-4/5">
               <div
                 class="bg-red-500"
                 :style="{ width: `${Math.min((clickCount / 30) * 100, 100)}%` }"
               ></div>
-              <!-- Heart icon -->
               <div
                 class="progress-bar-heart"
                 :style="{
@@ -79,21 +77,25 @@
           <div class="relative">
             <swiper
               :slides-per-view="3"
-              :space-between="10"
               loop
               autoplay
               pagination
-              navigation
+              :simulateTouch="true"
+              :allowTouchMove="true"
+              :cssMode="true"
+              :mousewheel="true"
+              :keyboard="true"
+              :modules="modules"
               class="rounded-lg"
             >
               <swiper-slide v-for="(photo, index) in photos" :key="index">
                 <div class="group relative">
                   <div
-                    class="image-container rounded-xl transition-transform duration-300 group-hover:scale-95"
+                    class="image-container polaroid rounded-xl transition-transform duration-300 group-hover:scale-95"
                   >
                     <img :src="photo.url" :alt="photo.alt" />
                     <div
-                      class="text-overlay absolute bottom-0 left-0 w-full bg-[#1e4f8d] bg-opacity-90 p-4 rounded-b-xl text-white"
+                      class="text-overlay absolute bottom-0 left-0 w-full bg-[#f76c88] bg-opacity-90 p-4 rounded-b-xl text-white"
                     >
                       {{ photo.text }}
                     </div>
@@ -117,6 +119,7 @@ import Journey from "../components/Journey.vue";
 import Porto from "@/components/Porto.vue";
 
 import itwImage from "@/assets/itw.png";
+import p1 from "@/assets/secret/p1.jpg";
 import photo3 from "@/assets/photo/3.jpg";
 import photo4 from "@/assets/photo/4.jpg";
 
@@ -131,7 +134,7 @@ export default {
   data() {
     return {
       photos: [
-        { url: itwImage, alt: "Image 1", text: "Memory 1: A beautiful sunset" },
+        { url: p1, alt: "Image 1", text: "Memory 1: A beautiful sunset" },
         { url: photo3, alt: "Image 2", text: "Memory 2: A peaceful beach" },
         {
           url: itwImage,
@@ -157,7 +160,7 @@ export default {
     });
 
     this.$nextTick(() => {
-      AOS.refresh(); // Refresh AOS to detect new elements
+      AOS.refresh();
     });
   },
   methods: {
@@ -166,15 +169,12 @@ export default {
         this.clickCount += 1;
       }
 
-      // Add a new love emoticon with random position
       this.addEmoticon();
 
       if (this.clickCount >= 30) {
-        this.isGalleryUnlocked = true; // Unlock gallery after 5 clicks
+        this.isGalleryUnlocked = true;
       }
     },
-
-    // Function to add a love emoticon with random position
     addEmoticon() {
       const container = document.querySelector("#locked .container");
       const containerRect = container.getBoundingClientRect();
@@ -196,10 +196,9 @@ export default {
 
       this.emoticons.push(emoticon);
 
-      // Automatically remove emoticons after a brief time
       setTimeout(() => {
-        this.emoticons.shift(); // Remove the oldest emoticon
-      }, 2000); // Remove after 2 seconds
+        this.emoticons.shift();
+      }, 2000);
     },
   },
 };
@@ -210,9 +209,9 @@ export default {
   background-image: url("@/assets/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 100vh; /* Optional: membuat elemen setinggi viewport */
+  min-height: 100vh;
 }
-/* Hero section styles */
+
 .hero {
   background-size: cover;
   background-position: center;
@@ -224,7 +223,6 @@ export default {
   z-index: 1;
 }
 
-/* Locked section styles */
 #locked {
   display: flex;
   justify-content: center;
@@ -237,7 +235,6 @@ export default {
   position: relative;
 }
 
-/* Gallery fade transition */
 .gallery-fade-enter-active,
 .gallery-fade-leave-active {
   transition: opacity 1s ease-in-out;
@@ -255,25 +252,33 @@ export default {
 .text-primary {
   color: #000000;
 }
-
 .image-container {
   position: relative;
-  width: 100%;
+  width: 500px;
   height: 500px;
   max-width: 400px;
   margin: 0 auto;
   overflow: hidden;
+  background-color: #fff; /* White background to mimic the Polaroid frame */
+  padding: 20px; /* Padding to create a frame around the image */
+  border-radius: 15px; /* Rounded corners for the Polaroid effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow to lift the card */
   transition: transform 0.3s ease-in-out;
-}
-
-.image-container:hover {
-  transform: scale(0.98);
 }
 
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px; /* Rounded corners inside the frame */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .text-overlay {
@@ -296,7 +301,6 @@ img {
   height: 24px;
 }
 
-/* Optional: Add animation effects for fading in and out */
 @keyframes fadeInOut {
   0% {
     opacity: 0;
@@ -313,50 +317,46 @@ img {
   animation: fadeInOut 2s ease-in-out;
 }
 
-/* Locked section styles */
 #locked {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh; /* Ensure full height of the viewport */
+  height: 100vh;
 }
 
 #locked .container {
   text-align: center;
   position: relative;
-  z-index: 2; /* Ensure the container is above the love emoticon */
-  width: 100%; /* Ensure container takes up full width */
+  z-index: 2;
+  width: 100%;
 }
 
 .progress-bar-wrapper {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically (if needed) */
+  justify-content: center;
+  align-items: center;
   width: 100%;
   z-index: 0;
-  margin: 0 auto; /* Center within the container */
+  margin: 0 auto;
 }
 
-/* Progress bar container */
 .progress-bar-wrapper .w-4\/5 {
   position: relative;
-  width: 50%; /* Adjust width as needed */
+  width: 50%;
   height: 20px;
-  background-color: #e0e0e0; /* Light gray background */
-  border-radius: 6px; /* Rounded corners */
+  background-color: #e0e0e0;
+  border-radius: 6px;
   overflow: visible;
 }
 
-/* Progress bar (red fill) */
 .bg-red-500 {
   height: 100%;
-  background-color: #ff4d4d; /* Bright red color for progress */
-  border-radius: 6px; /* Match container rounding */
-  transition: width 0.5s ease; /* Smooth transition for progress */
+  background-color: #ff4d4d;
+  border-radius: 6px;
+  transition: width 0.5s ease;
 }
 
-/* Heart icon indicator */
 .love-button {
   background: transparent;
   border: none;
@@ -369,51 +369,50 @@ img {
   align-items: center;
   box-shadow: 0 10px 15px rgba(255, 255, 255, 0.6);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  perspective: 500px; /* Memberikan perspektif untuk efek 3D */
+  perspective: 500px;
 }
 
 .love-button:active {
-  transform: translateY(4px); /* Tombol akan 'masuk' saat ditekan */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat tombol ditekan */
+  transform: translateY(4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .progress-bar-heart {
   position: absolute;
-  top: 50%; /* Tetap di tengah vertikal progress bar */
-  transform: translate(-50%, -50%); /* Geser sedikit ke atas */
-  width: 32px; /* Ukuran ikon */
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
   height: 32px;
-  background-color: #fff; /* Warna latar belakang putih */
-  border-radius: 50%; /* Membuat ikon berbentuk lingkaran */
+  background-color: #fff;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
-  border: 2px solid #ff4d4d; /* Border merah */
-  z-index: 1; /* Pastikan ikon berada di atas progress bar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ff4d4d;
+  z-index: 1;
 }
 
 .progress-bar-heart img {
-  width: 16px; /* Ukuran gambar hati */
+  width: 16px;
   height: 16px;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent color */
-  backdrop-filter: blur(10px); /* Blur effect on the background */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Transparent border */
-  border-radius: 16px; /* Rounded corners */
-  box-shadow: 0 8px 32px rgba(255, 205, 210, 0.37); /* Updated shadow color to #FFCDD2 */
-  padding: 2rem; /* Padding inside the card */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(255, 205, 210, 0.37);
+  padding: 2rem;
   transition: all 0.3s ease-in-out;
-  position: relative; /* Set relative position */
-  z-index: 0; /* Ensure the background is behind the content */
-  height: 170px; /* Set fixed height */
-  width: 100%; /* Make the width flexible */
-  max-width: 800px; /* Set a max width for better responsiveness */
+  position: relative;
+  z-index: 0;
+  height: 170px;
+  width: 100%;
+  max-width: 800px;
   justify-content: center;
   align-items: center;
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto;
 }
-
 </style>

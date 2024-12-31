@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-primary py-6">
+  <div class="bg-none py-6">
     <div class="container mx-auto">
-      <h2 class="text-white text-3xl font-semibold mb-6 text-center">
+      <h2 class="text-black text-3xl font-semibold mb-6 text-center">
         My Photography
       </h2>
-      <div class="relative">
+      <div class="relative m-7">
         <swiper
           :slides-per-view="3"
           :space-between="10"

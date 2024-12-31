@@ -11,7 +11,6 @@
       class="grid grid-cols-2 gap-8 justify-center px-6 md:grid-cols-2 lg:grid-cols-4"
       data-aos="fade-up"
     >
-      <!-- Loop over the portfolio items -->
       <div
         v-for="(portfolio, index) in portfolios"
         :key="index"
@@ -24,7 +23,6 @@
           />
         </div>
 
-        <!-- See More Button -->
         <div
           class="see-more-button absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white text-lg opacity-0 group-hover:opacity-100 transition-all duration-300"
         >
@@ -48,10 +46,7 @@ import itw3 from "@/assets/itw3.png";
 import itw4 from "@/assets/itw4.png";
 import itgc from "@/assets/itgc.png";
 import celebrait from "@/assets/celebrait.png";
-
 import idcard from "@/assets/idcard.jpg";
-
-import { AOS } from "aos";
 import "aos/dist/aos.css";
 
 export default {
@@ -117,23 +112,22 @@ export default {
 .image-container {
   position: relative;
   width: 100%;
-  height: auto; /* Let the container adjust based on the image */
+  height: auto;
   overflow: hidden;
 }
 
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Image will cover the container without distortion */
+  object-fit: cover;
 }
 
 .rounded-lg {
   border-radius: 0.5rem;
 }
 
-/* Hover effects */
 .group:hover .image-container img {
-  filter: blur(5px); /* Apply blur effect on image */
+  filter: blur(5px);
 }
 
 .see-more-button {
@@ -141,7 +135,7 @@ img {
 }
 
 .group:hover .see-more-button {
-  opacity: 1; /* Show the "See More" button when hovering */
+  opacity: 1;
 }
 
 a {
@@ -149,11 +143,11 @@ a {
   background-color: #000000;
   border-radius: 5px;
   transition: background-color 0.3s;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
   color: white;
 }
 
 a:hover {
-  background-color: #7d12ff
+  background-color: #7d12ff;
 }
 </style>
