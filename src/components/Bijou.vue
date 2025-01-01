@@ -10,8 +10,7 @@
       >
         <img src="@/assets/itw.png" alt="Event 1" class="bijou-image" />
         <div class="bijou-content">
-          <p class="date">Date: May 2023</p>
-          <p class="event">Disurprise ulang tahuun best birthday everr</p>
+          <p class="event">bijoubijoubjijoubjbibjibjobjop</p>
         </div>
       </div>
 
@@ -22,8 +21,7 @@
       >
         <img src="@/assets/itw.png" alt="Event 1" class="bijou-image" />
         <div class="bijou-content">
-          <p class="date">Date: Forever</p>
-          <p class="event">All the foods we eat</p>
+          <p class="event">bijoubijoubjijoubjbibjibjobjop</p>
         </div>
       </div>
 
@@ -34,8 +32,7 @@
       >
         <img src="@/assets/itw.png" alt="Event 1" class="bijou-image" />
         <div class="bijou-content">
-          <p class="date">Date: 24 Maret 2024</p>
-          <p class="event">Happy Birthday to this Gorgeous Girl</p>
+          <p class="event">bijoubijoubjijoubjbibjibjobjop</p>
         </div>
       </div>
 
@@ -46,8 +43,7 @@
       >
         <img src="@/assets/itw.png" alt="Event 1" class="bijou-image" />
         <div class="bijou-content">
-          <p class="date">Date: 20 Juni 2023</p>
-          <p class="event">Main ke Malang with Da Friends</p>
+          <p class="event">bijoubijoubjijoubjbibjibjobjop</p>
         </div>
       </div>
     </div>
