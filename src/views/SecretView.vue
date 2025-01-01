@@ -18,6 +18,9 @@
       <Message />
     </transition>
 
+      <Bijou />
+
+
     <!-- Locked Section -->
     <section
       id="locked"
@@ -120,6 +123,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Journey from "../components/Journey.vue";
 import Message from "@/components/Message.vue";
+import Bijou from "@/components/Bijou.vue";
 
 import itwImage from "@/assets/itw.png";
 import p1 from "@/assets/secret/p1.jpg";
@@ -132,6 +136,7 @@ export default {
     Swiper,
     SwiperSlide,
     Message,
+    Bijou,
     Journey,
   },
   data() {
@@ -159,7 +164,7 @@ export default {
   mounted() {
     AOS.init({
       duration: 1000,
-      once: true,
+      once: false,
     });
 
     this.$nextTick(() => {
