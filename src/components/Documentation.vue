@@ -11,7 +11,12 @@
           loop
           autoplay
           pagination
-          navigation
+          :simulateTouch="true"
+          :allowTouchMove="true"
+          :cssMode="true"
+          :mousewheel="true"
+          :keyboard="true"
+          :modules="modules"
           class="rounded-lg"
           data-aos="fade-up"
         >

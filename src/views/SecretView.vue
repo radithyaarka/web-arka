@@ -14,6 +14,9 @@
     <transition data-aos="fade-up">
       <Journey />
     </transition>
+    <transition data-aos="fade-up">
+      <Message />
+    </transition>
 
     <!-- Locked Section -->
     <section
@@ -116,7 +119,7 @@ import "swiper/swiper-bundle.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Journey from "../components/Journey.vue";
-import Porto from "@/components/Porto.vue";
+import Message from "@/components/Message.vue";
 
 import itwImage from "@/assets/itw.png";
 import p1 from "@/assets/secret/p1.jpg";
@@ -128,7 +131,7 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    Porto,
+    Message,
     Journey,
   },
   data() {
