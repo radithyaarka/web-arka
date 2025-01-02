@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.79",
+    "@srexi/purecounterjs": "^1.5.0",
     "aos": "^2.3.4",
     "leaflet": "^1.9.4",
     "oh-vue-icons": "^1.0.0-rc3",
