@@ -17,6 +17,9 @@
     <transition data-aos="fade-up">
       <Message />
     </transition>
+    <transition data-aos="fade-up">
+      <Counter />
+    </transition>
 
       <Bijou />
 
@@ -123,6 +126,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Journey from "../components/Journey.vue";
 import Message from "@/components/Message.vue";
+import Counter from "@/components/Counter.vue";
 import Bijou from "@/components/Bijou.vue";
 
 import itwImage from "@/assets/itw.png";
@@ -136,6 +140,7 @@ export default {
     Swiper,
     SwiperSlide,
     Message,
+    Counter,
     Bijou,
     Journey,
   },
