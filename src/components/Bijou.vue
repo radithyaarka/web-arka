@@ -1,50 +1,36 @@
 <template>
-  <div
-    class="w-full overflow-hidden max-[500px]:flex max-[500px]:flex-col max-[500px]:justify-center max-[500px]:items-center max-[500px]:mx-0"
-  >
-    <div class="wrapper-bijou flex flex-col justify-center items-center">
-      <div
-        class="bijou-item fade-left"
-        data-aos="fade-left"
-        data-aos-delay="500"
-      >
-        <img src="@/assets/itw.png" alt="Event 1" class="bijou-image" />
-        <div class="bijou-content">
-          <p class="event">bijoubijoubjijoubjbibjibjobjop</p>
-        </div>
-      </div>
+  <div class="wrapper-bijou flex flex-col justify-center items-center">
+    <!-- Title Section -->
+    <h2 class="title text-center text-white mb-8 text-xl font-semibold">
+      sebelum lanjut, let's see all of this biboo pic first hehe
+    </h2>
 
-      <div
-        class="bijou-item fade-right"
-        data-aos="fade-right"
-        data-aos-delay="500"
-      >
-        <img src="@/assets/itw.png" alt="Event 1" class="bijou-image" />
-        <div class="bijou-content">
-          <p class="event">bijoubijoubjijoubjbibjibjobjop</p>
-        </div>
+    <!-- Bijou Items -->
+    <div class="bijou-item fade-left" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
+      <img src="@/assets/secret/bijou1.jpg" alt="Event 1" class="bijou-image" />
+      <div class="bijou-content">
+        <p class="event">ini bijouuu</p>
       </div>
+    </div>
 
-      <div
-        class="bijou-item fade-left"
-        data-aos="fade-left"
-        data-aos-delay="500"
-      >
-        <img src="@/assets/itw.png" alt="Event 1" class="bijou-image" />
-        <div class="bijou-content">
-          <p class="event">bijoubijoubjijoubjbibjibjobjop</p>
-        </div>
+    <div class="bijou-item fade-right" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+      <img src="@/assets/secret/bijou2.jpg" alt="Event 1" class="bijou-image" />
+      <div class="bijou-content">
+        <p class="event">kalo yang ini biboooo</p>
       </div>
+    </div>
 
-      <div
-        class="bijou-item fade-right"
-        data-aos="fade-right"
-        data-aos-delay="500"
-      >
-        <img src="@/assets/itw.png" alt="Event 1" class="bijou-image" />
-        <div class="bijou-content">
-          <p class="event">bijoubijoubjijoubjbibjibjobjop</p>
-        </div>
+    <div class="bijou-item fade-left" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
+      <img src="@/assets/secret/bijou3.jpg" alt="Event 1" class="bijou-image" />
+      <div class="bijou-content">
+        <p class="event">kalo ini koseki bejo</p>
+      </div>
+    </div>
+
+    <div class="bijou-item fade-right" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+      <img src="@/assets/secret/bijou4.jpg" alt="Event 1" class="bijou-image" />
+      <div class="bijou-content">
+        <p class="event">ini batu</p>
       </div>
     </div>
   </div>
@@ -59,8 +45,10 @@ export default {
   mounted() {
     AOS.init({
       duration: 4000,
+      offset: 120,
       easing: "ease-in-out",
-      once: true,
+      once: false, 
+      mirror: true,
     });
   },
 };
@@ -73,6 +61,11 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 20px; /* Add spacing between the cards */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .bijou-item {
@@ -96,12 +89,11 @@ export default {
   font-size: 14px;
 }
 
-/* Apply slight horizontal translation for fade-left and fade-right */
 .fade-left {
-  transform: translateX(-10px); /* Move a little to the left */
+  transform: translateX(-400px);
 }
 
 .fade-right {
-  transform: translateX(10px); /* Move a little to the right */
+  transform: translateX(400px);
 }
 </style>

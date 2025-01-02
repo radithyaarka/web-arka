@@ -5,9 +5,9 @@
       class="hero bg-none h-screen flex items-center justify-center text-white text-center"
     >
       <div class="container mx-auto glass-card">
-        <h1 class="text-5xl font-semibold mb-4">Welcome to Our Gallery</h1>
+        <h1 class="text-4xl font-semibold mb-4">Welcome to Arka and Alma's Gallery!</h1>
         <p class="text-lg mb-6">
-          Explore the beautiful memories we have captured.
+          kita udah mau setahun yeyy! let's see our recap dibawah yaa
         </p>
       </div>
     </section>
@@ -27,9 +27,9 @@
       class="h-screen flex items-center justify-center text-white text-center relative"
     >
       <div class="container mx-auto">
-        <h2 class="text-3xl font-semibold mb-4">Unlock the Gallery</h2>
+        <h2 class="text-3xl font-semibold mb-4">wah mentok, segitu doang kah?</h2>
         <p class="text-lg mb-6">
-          Press the button 5 times to unlock the gallery.
+          engga donggg, kalo mau lanjut spam love dulu HEHEHEHE
         </p>
         <div class="mt-20">
           <button

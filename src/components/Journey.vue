@@ -101,7 +101,7 @@ export default {
           description: "last meeting smst3, dah mulai dekett",
         },
         {
-          text: "21th February 2024",
+          text: "21st February 2024",
           image: journey5,
           description: "taulah tanggal apa💕",
         },
