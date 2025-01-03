@@ -128,7 +128,7 @@ export default {
         {
           text: "21st December 2024",
           image: journey10,
-          description: "PHOTOBOOTH DATE FINALLYY!! (ini lucu bgt fotonya😍)",
+          description: "PHOTOBOX DATE FINALLYY!! (ini lucu bgt fotonya😍)",
         },
         {
           text: "??? 2025",

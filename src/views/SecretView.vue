@@ -5,7 +5,9 @@
       class="hero bg-none h-screen flex items-center justify-center text-white text-center"
     >
       <div class="container mx-auto glass-card">
-        <h1 class="text-4xl font-semibold mb-4">Welcome to Arka and Alma's Gallery!</h1>
+        <h1 class="text-4xl font-semibold mb-4">
+          Welcome to Arka and Alma's Gallery!
+        </h1>
         <p class="text-lg mb-6">
           kita udah mau setahun yeyy! let's see our recap dibawah yaa
         </p>
@@ -15,14 +17,10 @@
       <Journey />
     </transition>
     <transition data-aos="fade-up">
-      <Message />
-    </transition>
-    <transition data-aos="fade-up">
       <Counter />
     </transition>
 
-      <Bijou />
-
+    <Bijou />
 
     <!-- Locked Section -->
     <section
@@ -30,7 +28,9 @@
       class="h-screen flex items-center justify-center text-white text-center relative"
     >
       <div class="container mx-auto">
-        <h2 class="text-3xl font-semibold mb-4">wah mentok, segitu doang kah?</h2>
+        <h2 class="text-3xl font-semibold mb-4">
+          wah mentok, segitu doang kah?
+        </h2>
         <p class="text-lg mb-6">
           engga donggg, kalo mau lanjut spam love dulu HEHEHEHE
         </p>
@@ -82,7 +82,10 @@
     <transition name="gallery-fade" data-aos="fade-up">
       <div v-if="isGalleryUnlocked" class="bg-none py-6" id="gallery">
         <div class="container mx-auto text-center">
-          <h2 class="text-white text-3xl font-semibold mb-6">Our Memories</h2>
+          <h2 class="text-white text-3xl font-semibold mb-2">Our Memories</h2>
+          <p class="text-white text-lg mb-6">
+            kumpulan foto foto kitaaa hehe, ga semua sih, kalo semua gamuatt
+          </p>
           <div class="relative">
             <swiper
               :slides-per-view="3"
@@ -129,10 +132,22 @@ import Message from "@/components/Message.vue";
 import Counter from "@/components/Counter.vue";
 import Bijou from "@/components/Bijou.vue";
 
-import itwImage from "@/assets/itw.png";
+
 import p1 from "@/assets/secret/p1.jpg";
-import photo3 from "@/assets/photo/3.jpg";
-import photo4 from "@/assets/photo/4.jpg";
+import p2 from "@/assets/secret/p2.jpg";
+import p3 from "@/assets/secret/p3.jpg";
+import p4 from "@/assets/secret/p4.jpg";
+import p5 from "@/assets/secret/p5.jpg";
+import p6 from "@/assets/secret/p6.jpg";
+import p7 from "@/assets/secret/p7.jpg";
+import p8 from "@/assets/secret/p8.jpg";
+import p9 from "@/assets/secret/p9.jpg";
+import p10 from "@/assets/secret/p10.jpg";
+import p11 from "@/assets/secret/p11.jpg";
+import p12 from "@/assets/secret/p12.jpg";
+import p13 from "@/assets/secret/p13.jpg";
+import p14 from "@/assets/secret/p14.jpg";
+
 
 export default {
   name: "Gallery",
@@ -147,22 +162,23 @@ export default {
   data() {
     return {
       photos: [
-        { url: p1, alt: "Image 1", text: "Memory 1: A beautiful sunset" },
-        { url: photo3, alt: "Image 2", text: "Memory 2: A peaceful beach" },
-        {
-          url: itwImage,
-          alt: "Image 3",
-          text: "Memory 3: City lights at night",
-        },
-        { url: photo4, alt: "Image 4", text: "Memory 4: Mountain adventure" },
-        {
-          url: itwImage,
-          alt: "Image 5",
-          text: "Memory 5: The serenity of nature",
-        },
+        { url: p1, alt: "Image 1", text: "uniqlooo" },
+        { url: p2, alt: "Image 2", text: "cute fotonya" },
+        { url: p3, alt: "Image 3", text: "lupa take kapan, tapi lucu hehe"},
+        { url: p4, alt: "Image 4", text: "very zoom :o"},
+        { url: p5, alt: "Image 5", text: "jahimmm"},
+        { url: p6, alt: "Image 6", text: "last meet di smst 4(?)"},
+        { url: p7, alt: "Image 7", text: "legoo"},
+        { url: p8, alt: "Image 8", text: "alma boboo"},
+        { url: p9, alt: "Image 9", text: "balonbalonbalonbalon"},
+        { url: p10, alt: "Image 10", text: "hehe ini lucu"},
+        { url: p11, alt: "Image 11", text: "lego lagii"},
+        { url: p12, alt: "Image 12", text: "cute"},
+        { url: p13, alt: "Image 13", text: "cute"},
+        { url: p14, alt: "Image 14", text: "cute"},
       ],
       clickCount: 0,
-      isGalleryUnlocked: false,
+      isGalleryUnlocked: true,
       emoticons: [],
     };
   },

@@ -3,7 +3,9 @@
     <!-- Title -->
     <h1 class="title text-4xl font-bold text-[#ffcdd2] mb-4">Love Counter</h1>
     <!-- Subtitle -->
-    <p class="sub-title text-xl text-white mb-8">yuk itung udah bucin berapa kali WKWKWK</p>
+    <p class="sub-title text-xl text-white mb-8">
+      yuk itung udah bucin berapa kali WKWKWK
+    </p>
 
     <!-- Counter Cards -->
     <div class="word-counts flex justify-center gap-8">
@@ -17,15 +19,25 @@
           class="count text-4xl text-teal-300 font-bold mb-2 text-center"
           :data-purecounter-start="0"
           :data-purecounter-end="count"
-          data-purecounter-duration="1"
+          :data-purecounter-duration="1"
+          data-purecounter-delay="1"
         ></div>
       </div>
     </div>
+
+    <!-- Additional Text and Button -->
+    <p class="text-white mt-6 text-lg">send more dongg 👉👈</p>
+    <a href="https://wa.me/6282254772727?text=haii%20sayangg"
+      target="_blank">
+      <button class="mt-4 bg-[#ffcdd2] text-black py-2 px-6 rounded-full text-l font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+        klik ini!
+      </button>
+    </a>
   </div>
 </template>
 
 <script>
-import PureCounter from '@srexi/purecounterjs';
+import PureCounter from "@srexi/purecounterjs";
 
 export default {
   data() {
@@ -35,13 +47,14 @@ export default {
         "love u": 909,
         kangen: 239,
       },
+      counterCompleted: false, // Track whether the counter animation is complete
     };
   },
   mounted() {
-    // Inisialisasi PureCounter
     this.$nextTick(() => {
+      // Initialize PureCounter
       new PureCounter({
-        selector: '.count', // Pilih elemen dengan class 'count'
+        selector: ".count", // Ensure the selector matches
       });
     });
   },
@@ -52,5 +65,30 @@ export default {
 .count {
   font-size: 2rem;
   color: teal;
+}
+
+/* Animation for fade-in effect */
+.fade-in {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+/* Define the fade-in keyframe animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Style for the button */
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e79ea6;
 }
 </style>
