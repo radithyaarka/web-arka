@@ -7,7 +7,6 @@
         <div :class="['flex flex-col gap-6 max-w-lg', fadeClassText]">
           <!-- Text Section -->
           <div class="text-section glass-card p-8">
-            <h3 class="text-sm text-black mb-2">WELCOME TO MY WEBSITE</h3>
             <h1 class="text-4xl font-bold text-black mb-4">
               Hi, I'm <span class="text-accent">Arka Radithya</span>
             </h1>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-center items-center min-h-screen bg-none relative"
+    class="flex justify-center items-center min-h-screen bg-none relative" id="About"
   >
     <!-- Background Stars -->
     <img
