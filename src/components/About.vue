@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex justify-center items-center min-h-screen bg-primary relative"
+    class="flex justify-center items-center min-h-screen bg-none relative"
   >
     <!-- Background Stars -->
     <img
@@ -22,12 +22,12 @@
     <img
       src="@/assets/star.svg"
       alt="Star 4"
-      class="absolute w-6 h-6 top-1/4 right-1/4 opacity-70 animate-spin-slow hover:animate-spin-fast filter-gold glow-effect"
+      class="absolute w-6 h-6 bottom-20 right-1/4 opacity-70 animate-spin-slow hover:animate-spin-fast filter-gold glow-effect"
     />
     <img
       src="@/assets/star.svg"
       alt="Star 5"
-      class="absolute w-6 h-6 bottom-1/3 left-1/3 opacity-70 animate-spin-slow-reverse hover:animate-spin-fast filter-gold glow-effect"
+      class="absolute w-6 h-6 bottom-5 left-2/3 opacity-70 animate-spin-slow-reverse hover:animate-spin-fast filter-gold glow-effect"
     />
     <img
       src="@/assets/star.svg"
@@ -56,7 +56,7 @@
     />
 
     <div
-      class="bg-white text-primary rounded-lg shadow-lg p-8 w-4/5 sm:w-2/3 md:w-1/2 lg:w-2/5 card z-10"
+      class="bg-white text-primary rounded-lg shadow-lg p-8 w-4/5 sm:w-2/3 md:w-1/2 lg:w-3/5 card z-10"
       data-aos="fade-up"
     >
       <div class="flex justify-center mb-6">
@@ -200,7 +200,8 @@ button {
 }
 
 button:hover {
-  background-color: #7d12ff; /* Darker shade of red on hover */
+  background-color: #ffcdd2;
+  color: #000000; 
 }
 
 button.shadow-md {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main-container">
     <Header />
     <HeroSection />
     <About />
@@ -34,3 +34,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.main-container {
+  background-image: url("@/assets/bg2.png");
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  min-height: 100vh; /* Ensure it covers the viewport height */
+}
+</style>

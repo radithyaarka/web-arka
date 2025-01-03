@@ -1,15 +1,20 @@
 <template>
-  <div class="min-h-screen bg-white py-12">
+  <div class="min-h-screen bg-none py-12 " data-aos="fade-up">
     <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-primary">Portofolio</h1>
-      <p class="text-lg text-primary mt-2">
-        Explore the variety of my innovative and creative designs
+      <h1
+        class="text-5xl md:text-6xl font-extrabold"
+      >
+        Portofolio
+      </h1>
+      <p
+        class="text-lg md:text-xl text-gray-700 mt-4 max-w-2xl mx-auto leading-relaxed"
+      >
+        Explore more variety of my innovative and creative designs
       </p>
     </div>
 
     <div
       class="grid grid-cols-2 gap-8 justify-center px-6 md:grid-cols-2 lg:grid-cols-4"
-      data-aos="fade-up"
     >
       <div
         v-for="(portfolio, index) in portfolios"
@@ -46,7 +51,7 @@ import itw3 from "@/assets/itw3.png";
 import itw4 from "@/assets/itw4.png";
 import itgc from "@/assets/itgc.png";
 import celebrait from "@/assets/celebrait.png";
-import idcard from "@/assets/idcard.jpg";
+
 import "aos/dist/aos.css";
 
 export default {
@@ -148,6 +153,7 @@ a {
 }
 
 a:hover {
-  background-color: #7d12ff;
+  background-color: #ffcdd2;
+  color: #000000;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div class="bg-none py-6">
     <div class="container mx-auto">
-      <h2 class="text-black text-3xl font-semibold mb-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-center mb-10">
         My Photography
-      </h2>
+      </h1>
       <div class="relative m-7">
         <swiper
           :slides-per-view="3"

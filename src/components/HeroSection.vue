@@ -1,28 +1,27 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <div class="hero-section bg-primary relative flex items-center justify-center">
-      <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="hero-section bg-none relative flex items-center justify-center">
       <div class="container mx-auto flex relative z-10 h-full px-8 items-center justify-between">
         <!-- Left Section (Text and Skills) -->
         <div :class="['flex flex-col gap-6 max-w-lg', fadeClassText]">
           <!-- Text Section -->
           <div class="text-section glass-card p-8">
-            <h3 class="text-sm text-white mb-2">WELCOME TO MY WEBSITE</h3>
-            <h1 class="text-4xl font-bold text-white mb-4">
+            <h3 class="text-sm text-black mb-2">WELCOME TO MY WEBSITE</h3>
+            <h1 class="text-4xl font-bold text-black mb-4">
               Hi, I'm <span class="text-accent">Arka Radithya</span>
             </h1>
-            <h2 class="text-xl font-light text-white mb-6 typing-effect">
+            <h2 class="text-xl font-light text-black mb-6 typing-effect">
               {{ textContent }}
             </h2>
-            <p class="text-white mb-6">
+            <p class="text-black mb-6">
               I have been studying since 2022. I am proficient in UI design, user experience, research, and web development.
             </p>
           </div>
 
           <!-- Best Skill On -->
           <div class="glass-card text-center p-6">
-            <h3 class="text-lg text-white font-semibold mb-4">Best Skill On</h3>
+            <h3 class="text-lg text-black font-semibold mb-4">Best Skill On</h3>
             <div class="flex justify-center gap-4 text-white">
               <i class="icon bg-gray-800 rounded-full p-3">
                 <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Figma" class="w-6 h-6">
@@ -53,9 +52,9 @@ export default {
     return {
       textArray: [
         "a UI/UX Designer Enthusiast.",
-        "A Front-End Developer Enthusiast.",
-        "An Information Technology Student.",
-        "A Mobile Developer Enthusiast.",
+        "a Front-End Developer Enthusiast.",
+        "an Information Technology Student.",
+        "a Mobile Developer Enthusiast.",
         "a UI/UX Designer Enthusiast."
       ],
       currentTextIndex: 0,
@@ -100,14 +99,13 @@ export default {
 
 <style scoped>
 .hero-section {
-  background-image: url("https://picsum.photos/id/16/2500/1667?grayscale");
   background-size: cover;
   background-position: center;
   height: calc(100vh - 64px);
 }
 
 .text-accent {
-  color: #d71bae;
+  color: #d0b502;
 }
 
 .glass-card {
@@ -155,7 +153,7 @@ export default {
 /* Typing effect */
 .typing-effect {
   display: inline-block;
-  border-right: 4px solid #fff; /* Adds a cursor effect */
+  border-right: 4px solid #000000; /* Adds a cursor effect */
   white-space: nowrap;
   overflow: hidden;
   min-height: 1.5em; /* Maintain a consistent height for the text container */
