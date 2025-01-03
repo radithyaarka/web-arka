@@ -147,7 +147,8 @@ import p11 from "@/assets/secret/p11.jpg";
 import p12 from "@/assets/secret/p12.jpg";
 import p13 from "@/assets/secret/p13.jpg";
 import p14 from "@/assets/secret/p14.jpg";
-
+import p15 from "@/assets/secret/p15.jpg";
+import p16 from "@/assets/secret/p16.jpg";
 
 export default {
   name: "Gallery",
@@ -173,12 +174,15 @@ export default {
         { url: p9, alt: "Image 9", text: "balonbalonbalonbalon"},
         { url: p10, alt: "Image 10", text: "hehe ini lucu"},
         { url: p11, alt: "Image 11", text: "lego lagii"},
-        { url: p12, alt: "Image 12", text: "cute"},
-        { url: p13, alt: "Image 13", text: "cute"},
-        { url: p14, alt: "Image 14", text: "cute"},
+        { url: p12, alt: "Image 12", text: "cutecutecuteee"},
+        { url: p13, alt: "Image 13", text: "gelang couplee, tapi punyamu rusak 😔"},
+        { url: p14, alt: "Image 14", text: "dirangkulll almaa EHEHEHE aku suka"},
+        { url: p15, alt: "Image 15", text: "lucuu, kek estetik gimana gitu hehehe"},
+        { url: p16, alt: "Image 16", text: "lucu hehehe"},
+
       ],
       clickCount: 0,
-      isGalleryUnlocked: true,
+      isGalleryUnlocked: false,
       emoticons: [],
     };
   },
