@@ -148,7 +148,10 @@ export default {
     validateSecretKey() {
       if (this.secretInput === "bijoulucu") {
         localStorage.setItem("authenticated", true); // Store authentication flag
-        this.$router.push("/secret"); // Redirect to the secret page
+        this.$router.push("/secret").then(() => {
+          // Ensure the page scrolls to the top after redirect
+          window.scrollTo(0, 0);
+        });
       } else {
         alert("Incorrect Secret Key!");
       }
