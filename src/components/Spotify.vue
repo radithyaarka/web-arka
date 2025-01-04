@@ -80,7 +80,7 @@ export default {
             "trus photograph sendiri taulah, my daily life WKWKW (budak medfo). " +
             "kayak, nggak peduli seberapa jauh kita dari orang-orang yang kita sayang (in this context, u obviously👊), foto-foto itu tetap bisa ngebawa kita kembali ke momen-momen indah. " +
             "dan setiap kali denger lagu ini, aku ngerasa kayak punya koleksi kenangan yang nggak bisa hilang, meskipun waktu terus berlalu. " +
-            "lagu ini juga personally one of my fav song sih. aku dulu pas sma pernah tampil di depan nyanyi lagu ini, sendirian, iya SENDIRIAN.😃",
+            "lagu ini juga personally one of my fav song sih. fun fact, aku dulu pas sma pernah tampil di depan nyanyi lagu ini, sendirian, iya SENDIRIAN.😃",
         },
         {
           title: "DNA",
@@ -124,7 +124,7 @@ export default {
           title: "Blue",
           artist: "Keshi",
           spotifyEmbedUrl:
-            "https://open.spotify.com/embed/track/4xykztf81jMOsVpC7grR4H?si=ea3fe8c3fe524315",
+            "https://open.spotify.com/embed/track/21yCOhgaDMc0KEtxhZHTbI?si=abadcf863e5d4090",
           description:
             "personally, one of my fav songs. my go-to song kalo lagi galau wkwkw. lagu ini bener-bener ngebahas tentang perasaan kehilangan yang mendalam. 'blue' itu simbol dari suasana hati yang sedih, " +
             "kayak ada yang kosong setelah hubungan berakhir. kita nyimpen semua kenangan indah bareng, tapi di sisi lain, ada perasaan sakit " +
