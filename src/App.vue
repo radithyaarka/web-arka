@@ -11,10 +11,10 @@ import "@fortawesome/fontawesome-free/css/all.css";
 </template>
 
 <style>
-/* Global CSS */
-*,
-*::before,
-*::after {
+body,
+button,
+input,
+textarea {
   font-family: "Montserrat", sans-serif;
 }
 </style>

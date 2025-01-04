@@ -47,7 +47,7 @@ export default {
       duration: 4000,
       offset: 120,
       easing: "ease-in-out",
-      once: false, 
+      once: false,
       mirror: true,
     });
   },
