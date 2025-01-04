@@ -195,6 +195,6 @@ a:hover {
 }
 
 .section {
-  padding: 100px 0; /* Space to make sure sections are tall enough to scroll */
+  padding: 50px 0; /* Space to make sure sections are tall enough to scroll */
 }
 </style>

@@ -17,6 +17,9 @@
       <Journey />
     </transition>
     <transition data-aos="fade-up">
+      <Spotify />
+    </transition>
+    <transition data-aos="fade-up">
       <Counter />
     </transition>
 
@@ -128,6 +131,7 @@ import "swiper/swiper-bundle.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Journey from "../components/Journey.vue";
+import Spotify from "../components/Spotify.vue";
 import Message from "@/components/Message.vue";
 import Counter from "@/components/Counter.vue";
 import Bijou from "@/components/Bijou.vue";
@@ -156,6 +160,7 @@ export default {
     Swiper,
     SwiperSlide,
     Message,
+    Spotify,
     Counter,
     Bijou,
     Journey,
