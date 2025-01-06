@@ -24,7 +24,7 @@
             <div class="group relative">
               <!-- Click on the image to open the modal -->
               <div
-                class="image-container rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-95"
+                class="image-container rounded-xl overflow-hidden transition-transform duration-300 group-hover:scale-95 hover:cursor-pointer"
                 @click="openModal(photo.url)"
               >
                 <img
@@ -49,7 +49,7 @@
           <!-- Modal Image with max width and height settings -->
           <img
             :src="currentPhoto"
-            class="w-full h-auto max-h-[80vh] object-contain mx-auto"
+            class="w-full h-auto max-h-[74vh] object-contain mx-auto"
           />
           <button
             @click="closeModal"

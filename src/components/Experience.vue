@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[30vh] mb-[10vh]" data-aos="fade-up">
+  <div class="mt-[30vh] mb-[10vh]">
     <h1 class="text-5xl md:text-6xl font-extrabold text-center mb-8">
       My Experience
     </h1>
@@ -185,6 +185,10 @@ export default {
   },
   mounted() {
     this.createIntersectionObserver();
+    // Disable scrolling when modal is open
+    if (this.isModalOpen) {
+      document.body.style.overflow = "hidden";
+    }
   },
   methods: {
     openModal(index) {

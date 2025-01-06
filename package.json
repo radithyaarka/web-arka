@@ -13,10 +13,13 @@
     "@srexi/purecounterjs": "^1.5.0",
     "aos": "^2.3.4",
     "font-awesome": "^4.7.0",
+    "jiti": "^2.4.2",
     "leaflet": "^1.9.4",
     "oh-vue-icons": "^1.0.0-rc3",
     "sweetalert2": "^11.15.5",
     "swiper": "^11.1.15",
+    "tailwind-scrollbar": "^4.0.0-beta.0",
+    "tailwindcss": "^3.4.17",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
@@ -25,7 +28,6 @@
     "@vitejs/plugin-vue": "^4.3.4",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29",
-    "tailwindcss": "^3.3.3",
-    "vite": "^4.4.9"
+    "vite": "^6.0.7"
   }
 }
