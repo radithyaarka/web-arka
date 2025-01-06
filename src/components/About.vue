@@ -67,7 +67,7 @@
         />
       </div>
       <h2 class="text-3xl font-bold mb-4 text-center">About</h2>
-      <p class="text-center mb-6">
+      <p class="text-justify mb-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat
         ornare viverra. Cras vitae posuere elit. In lacus nibh, commodo ac
         mauris eget, posuere elementum sapien. Cras rutrum efficitur turpis, nec

@@ -30,6 +30,17 @@
               class="text-gray-800 font-medium hover:text-purple-600 hover:underline cursor-pointer"
               :class="{
                 'underline font-bold text-purple-700':
+                  activeSection === 'experience',
+              }"
+              href="#experience"
+              @click.prevent="scrollToSection('experience')"
+            >
+              Experience
+            </a>
+            <a
+              class="text-gray-800 font-medium hover:text-purple-600 hover:underline cursor-pointer"
+              :class="{
+                'underline font-bold text-purple-700':
                   activeSection === 'portfolio',
               }"
               href="#portfolio"
@@ -59,6 +70,9 @@
     <div id="about" class="section">
       <About />
     </div>
+    <div id="experience" class="section">
+      <Experience />
+    </div>
     <div id="portfolio" class="section">
       <Porto />
       <Documentation />
@@ -73,6 +87,7 @@
 <script>
 import HeroSection from "@/components/HeroSection.vue";
 import About from "@/components/About.vue";
+import Experience from "@/components/Experience.vue";
 import Porto from "@/components/Porto.vue";
 import Documentation from "@/components/Documentation.vue";
 import Contact from "@/components/Contact.vue";
@@ -82,6 +97,7 @@ export default {
   components: {
     HeroSection,
     About,
+    Experience,
     Porto,
     Documentation,
     Contact,
