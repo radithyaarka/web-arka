@@ -43,20 +43,17 @@
         v-if="isModalOpen"
         class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
       >
-        <div
-          class="bg-white p-4 rounded-lg max-w-4xl w-full max-h-screen overflow-auto"
-        >
-          <!-- Modal Image with max width and height settings -->
-          <img
-            :src="currentPhoto"
-            class="w-full h-auto max-h-[74vh] object-contain mx-auto"
-          />
+        <div class="relative bg-white rounded-lg shadow-lg py-6 px-8">
           <button
             @click="closeModal"
-            class="absolute top-4 right-4 text-white font-bold text-xl"
+            class="absolute top-1 right-2 text-black font-bold text-xl hover:text-red-500"
           >
             X
           </button>
+          <img
+            :src="currentPhoto"
+            class="w-full h-auto max-h-[60vh] object-contain rounded-md"
+          />
         </div>
       </div>
     </div>

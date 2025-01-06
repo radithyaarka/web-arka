@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[30vh] mb-[10vh]">
+  <div class="mt-[30vh] mb-[10vh]" data-aos="fade-up">
     <h1 class="text-5xl md:text-6xl font-extrabold text-center mb-8">
       My Experience
     </h1>
@@ -60,43 +60,42 @@
         </div>
       </div>
     </div>
-
-    <!-- Modal untuk Foto -->
-    <div
-      v-if="isModalOpen"
-      class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
-    >
-      <div class="relative bg-white rounded-lg shadow-lg py-6 px-8">
+  </div>
+  <!-- Modal untuk Foto -->
+  <div
+    v-if="isModalOpen"
+    class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+  >
+    <div class="relative bg-white rounded-lg shadow-lg py-6 px-8">
+      <button
+        @click="closeModal"
+        class="absolute top-1 right-2 text-black font-bold text-xl hover:text-red-500"
+      >
+        X
+      </button>
+      <img
+        :src="currentImage"
+        alt="modal-image"
+        class="w-full h-auto max-h-[60vh] object-contain rounded-md"
+      />
+      <div class="flex justify-between mt-4">
         <button
-          @click="closeModal"
-          class="absolute top-1 right-2 text-black font-bold text-xl hover:text-red-500"
+          class="bg-white border-none px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 transform hover:text-[#ffcdd2] focus:outline-none active:scale-95 disabled:text-gray-400 disabled:cursor-default"
+          @click="prevImage"
+          :disabled="currentImageIndex === 0"
         >
-          X
+          Previous
         </button>
-        <img
-          :src="currentImage"
-          alt="modal-image"
-          class="w-full h-auto max-h-[60vh] object-contain rounded-md"
-        />
-        <div class="flex justify-between mt-4">
-          <button
-            class="bg-white border-none px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 transform hover:text-[#ffcdd2] focus:outline-none active:scale-95 disabled:text-gray-400 disabled:cursor-default"
-            @click="prevImage"
-            :disabled="currentImageIndex === 0"
-          >
-            Previous
-          </button>
-          <button
-            class="bg-white border-none px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 transform hover:text-[#ffcdd2] focus:outline-none active:scale-95 disabled:text-gray-400 disabled:cursor-default"
-            @click="nextImage"
-            :disabled="currentImageIndex === currentImageArray.length - 1"
-          >
-            Next
-          </button>
-        </div>
+        <button
+          class="bg-white border-none px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 transform hover:text-[#ffcdd2] focus:outline-none active:scale-95 disabled:text-gray-400 disabled:cursor-default"
+          @click="nextImage"
+          :disabled="currentImageIndex === currentImageArray.length - 1"
+        >
+          Next
+        </button>
       </div>
     </div>
-  </div>
+  </div>    
 </template>
 
 <script>
@@ -194,7 +193,7 @@ export default {
     openModal(index) {
       this.currentImageIndex = 0; // Set ke gambar pertama dari array
       if (this.experiences[index].imageUrl === idcard) {
-        this.currentImageArray = [itcare, itw3, itw4];
+        this.currentImageArray = [itcare, itw3, idcard];
       } else if (this.experiences[index].imageUrl === itw2) {
         this.currentImageArray = [itw, itw3, itw4];
       } else {
