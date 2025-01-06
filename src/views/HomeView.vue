@@ -69,6 +69,7 @@
     </div>
     <div id="about" class="section">
       <About />
+      <Skills />
     </div>
     <div id="experience" class="section">
       <Experience />
@@ -87,6 +88,7 @@
 <script>
 import HeroSection from "@/components/HeroSection.vue";
 import About from "@/components/About.vue";
+import Skills from "@/components/Skills.vue";
 import Experience from "@/components/Experience.vue";
 import Porto from "@/components/Porto.vue";
 import Documentation from "@/components/Documentation.vue";
@@ -97,6 +99,7 @@ export default {
   components: {
     HeroSection,
     About,
+    Skills,
     Experience,
     Porto,
     Documentation,
