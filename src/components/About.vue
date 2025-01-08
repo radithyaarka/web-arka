@@ -1,6 +1,7 @@
 <template>
   <div
-    class="flex justify-center items-center min-h-screen bg-none relative" id="About"
+    class="flex justify-center items-center min-h-screen bg-none relative"
+    id="About"
   >
     <!-- Background Stars -->
     <img
@@ -68,22 +69,26 @@
       </div>
       <h2 class="text-3xl font-bold mb-4 text-center">About</h2>
       <p class="text-justify mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat
-        ornare viverra. Cras vitae posuere elit. In lacus nibh, commodo ac
-        mauris eget, posuere elementum sapien. Cras rutrum efficitur turpis, nec
-        molestie nunc hendrerit eget. Sed justo urna, iaculis ac rutrum vel,
-        venenatis at nulla. Quisque at velit enim. Nullam faucibus molestie
-        scelerisque. Maecenas at quam mi. Integer at justo eu lacus convallis
-        finibus sit amet ut lacus. In finibus mauris sed risus cursus mollis.
-        Donec elit felis, dictum quis.
+        Hello! My name is Arka, a 2022 Information Technology student at ITS
+        Surabaya. I’m passionate about web development and data-driven
+        solutions, enjoying the process of crafting user-friendly designs and
+        analyzing data to solve problems. Beyond academics, I love photography,
+        which inspired me to join event committees in Design and Documentation
+        roles and contribute creatively. I am also an active member of HMIT’s
+        Media and Information Department, combining technology and creativity to
+        engage the community. I’m eager to learn, collaborate, and make a
+        positive impact in the digital and creative fields.
       </p>
+
       <div class="flex justify-center">
-        <button
-          class="text-white py-2 px-4 rounded-lg shadow-md"
-          @click.stop="flipCard"
+        <a
+          href="https://www.linkedin.com/in/arkananta-radithya/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button text-white py-2 px-4 rounded-lg shadow-md bg-primary hover:bg-opacity-80"
         >
           Learn More
-        </button>
+        </a>
       </div>
     </div>
 
@@ -194,17 +199,17 @@ export default {
   }
 }
 
-button {
+.button {
   transition: background-color 0.3s ease-in-out;
   background-color: #000000;
 }
 
-button:hover {
+.button:hover {
   background-color: #ffcdd2;
-  color: #000000; 
+  color: #000000;
 }
 
-button.shadow-md {
+.button.shadow-md {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
