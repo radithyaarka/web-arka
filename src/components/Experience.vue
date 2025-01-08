@@ -43,7 +43,7 @@
           <img
             :src="experience.imageUrl"
             alt="experience-image"
-            class="w-[400px] h-[500px] rounded-md object-cover cursor-pointer"
+            class="w-[400px] h-[470px] rounded-md object-cover cursor-pointer"
             @click="openModal(index)"
           />
         </div>
@@ -154,7 +154,7 @@ export default {
         {
           title: "HMIT Website Team - UI/UX",
           date: "June 2024 - August 2024",
-          imageUrl: e4_5,
+          imageUrl: e4,
           description:
             "As a UI/UX designer for the HMIT Website Team, I was tasked with enhancing the user experience of the organization’s website. " +
             "My role involved analyzing user feedback, identifying pain points, and implementing design improvements to make navigation more seamless and intuitive. " +
