@@ -116,6 +116,11 @@ import e4_1 from "@/assets/e4_1.png";
 import e4_2 from "@/assets/e4_2.png";
 import e4_3 from "@/assets/e4_3.png";
 import e4_5 from "@/assets/e4_5.png";
+import e5 from "@/assets/e5.png";
+import e5_1 from "@/assets/e5_1.png";
+import e5_2 from "@/assets/e5_2.png";
+import e5_3 from "@/assets/e5_3.png";
+import e5_4 from "@/assets/e5_4.png";
 
 export default {
   data() {
@@ -127,6 +132,7 @@ export default {
           imageUrl: e1,
           description:
             "Joining the Excelsior Website Team as a UI/UX designer was an incredible opportunity that expanded my skills and understanding of user-centric design. " +
+            "This project was particularly significant as it was the first web project I had ever undertaken, marking a milestone in my journey as a designer." +
             "I worked closely with a dynamic team to conceptualize, prototype, and implement intuitive interfaces. " +
             "The process involved conducting user research, creating wireframes, and refining designs based on user feedback. " +
             "Through this experience, I gained invaluable knowledge about usability testing and the importance of aligning design choices with user needs and business goals.",
@@ -164,22 +170,13 @@ export default {
         {
           title: "OKKBK IT 2024 - Head of Design and Documentation",
           date: "August 2024",
-          imageUrl: "https://via.placeholder.com/352x500",
+          imageUrl: e5,
           description:
             "Leading the Design and Documentation team for OKKBK IT 2024 was a defining moment in my journey as a creative leader. " +
-            "I managed a team of talented individuals to conceptualize and produce high-quality visuals that captured the spirit of the event. " +
-            "From brainstorming creative concepts to overseeing the execution of promotional materials and event documentation, I ensured that every deliverable met the highest standards. " +
-            "This role enhanced my leadership and project management skills while providing a platform to inspire and empower others in the creative process.",
-        },
-        {
-          title: "Elite x Pesraf - Expert Staff of Design and Documentation",
-          date: "September 2024 - December 2024",
-          imageUrl: "https://via.placeholder.com/352x500",
-          description:
-            "Serving as an expert staff member for the Elite x Pesraf collaboration allowed me to work on innovative projects that combined creativity with functionality. " +
-            "My responsibilities included developing visually striking designs for various platforms and meticulously documenting significant moments during the program. " +
-            "This experience challenged me to think outside the box and push the boundaries of conventional design. " +
-            "Collaborating with a diverse team of professionals, I gained a deeper appreciation for the power of teamwork and the role of design in driving meaningful impact.",
+            "OKKBK, as the orientation program for new students, required visuals that not only captured the spirit of the event but also conveyed a welcoming and inspiring message. " +
+            "I managed a team of talented individuals to conceptualize and produce high-quality materials, from designing orientation guides and promotional content to documenting key moments that highlighted the event's success. " +
+            "By brainstorming creative concepts and overseeing every stage of execution, I ensured that the visuals reflected the enthusiasm and energy of the program. " +
+            "This role significantly enhanced my leadership and project management skills while providing a platform to inspire and empower others in delivering impactful visual narratives.",
         },
       ],
       currentIndex: 0, // Indeks kartu aktif
@@ -211,8 +208,10 @@ export default {
         this.currentImageArray = [e1, e1_1, e1_2];
       } else if (this.experiences[index].imageUrl === e4) {
         this.currentImageArray = [e4_5, e4_1, e4_2, e4_3];
+      } else if (this.experiences[index].imageUrl === e5) {
+        this.currentImageArray = [e5_4, e5_1, e5_2, e5_3];
       } else {
-        this.currentImageArray = [this.experiences[index].imageUrl]; // Gambar tunggal untuk pengalaman lainnya
+        this.currentImageArray = [this.experiences[index].imageUrl];
       }
       this.isModalOpen = true;
     },
@@ -220,20 +219,16 @@ export default {
       this.isModalOpen = false;
     },
     prevImage() {
-      // Periksa jika bukan gambar pertama
       if (this.currentImageIndex > 0) {
         this.currentImageIndex--;
       } else {
-        // Jika gambar pertama, kembali ke gambar terakhir
         this.currentImageIndex = this.currentImageArray.length - 1;
       }
     },
     nextImage() {
-      // Periksa jika bukan gambar terakhir
       if (this.currentImageIndex < this.currentImageArray.length - 1) {
         this.currentImageIndex++;
       } else {
-        // Jika gambar terakhir, kembali ke gambar pertama
         this.currentImageIndex = 0;
       }
     },
@@ -241,42 +236,33 @@ export default {
       const container = this.$refs.cardContainer;
       if (!container) return;
 
-      // Fungsi untuk menghitung currentIndex berdasarkan scroll position
       const updateCurrentIndex = () => {
         const containerWidth = container.offsetWidth;
         const scrollPosition = container.scrollLeft;
 
-        // Mencari kartu yang paling dekat dengan posisi scroll
         let closestIndex = Math.round(scrollPosition / containerWidth);
-        // Jika scroll lebih dari setengah panjang kartu, aktifkan kartu berikutnya
         this.currentIndex = closestIndex;
       };
 
-      // Memperbarui index saat container di-scroll
       container.addEventListener("scroll", updateCurrentIndex);
     },
 
     setActiveExperience(index) {
-      // Mengubah currentIndex saat lingkaran diklik
       this.$nextTick(() => {
-        const container = this.$refs.cardContainer; // Ambil referensi container
-        const card = this.$refs[`card${index}`][0]; // Ambil kartu berdasarkan index
+        const container = this.$refs.cardContainer;
+        const card = this.$refs[`card${index}`][0];
 
         if (container && card) {
-          // Menghitung posisi horizontal kartu dalam container
           const cardOffset = card.offsetLeft;
 
-          // Lakukan scroll horizontal pada container
           container.scrollTo({
             left: cardOffset,
             behavior: "smooth",
           });
 
-          // Menunggu beberapa waktu setelah scroll untuk memastikan kartu terlihat
           setTimeout(() => {
-            // Setelah scroll selesai, perbarui currentIndex
             this.currentIndex = index;
-          }, 600); // Menunggu 600ms agar scroll selesai
+          }, 600);
         }
       });
     },
@@ -295,25 +281,23 @@ export default {
 .experience-card {
   scroll-snap-align: start;
   flex: 0 0 auto;
-  position: relative; /* Ensure that child elements are positioned correctly */
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-image:hover {
-  transform: scale(1.01); /* Slightly zoom in on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add shadow to give a "lift" effect */
+  transform: scale(1.01); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
 }
 
 .experience-image {
-  transition: transform 0.3s ease; /* Smooth transition for image */
+  transition: transform 0.3s ease; 
 }
 
-/* Menyembunyikan scrollbar */
 .experience-card-container::-webkit-scrollbar {
   display: none;
 }
 
-/* Styling untuk lingkaran indikator */
 .circle-indicator {
   width: 20px;
   height: 20px;
@@ -324,13 +308,13 @@ export default {
   transition: all 0.3s ease;
 }
 .modal {
-  max-height: 20vh; /* Limit the modal's overall height */
-  overflow-y: auto; /* Add scrolling if content exceeds max height */
+  max-height: 20vh;
+  overflow-y: auto;
 }
 
 .modal img {
   max-width: 100%;
-  max-height: 400px; /* Limit image height */
+  max-height: 400px;
   object-fit: contain;
 }
 
