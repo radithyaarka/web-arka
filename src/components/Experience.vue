@@ -95,16 +95,27 @@
         </button>
       </div>
     </div>
-  </div>    
+  </div>
 </template>
 
 <script>
-import idcard from "@/assets/idcard.jpg";
-import itw2 from "@/assets/itw2.png";
-import itcare from "@/assets/itcare.png";
-import itw from "@/assets/itw.png";
-import itw3 from "@/assets/itw3.png";
-import itw4 from "@/assets/itw4.png";
+import e1 from "@/assets/e1.png";
+import e1_1 from "@/assets/e1_1.png";
+import e1_2 from "@/assets/e1_2.png";
+import e2 from "@/assets/e2.png";
+import e2_1 from "@/assets/e2_1.png";
+import e2_2 from "@/assets/e2_2.png";
+import e2_3 from "@/assets/e2_3.png";
+import e2_4 from "@/assets/e2_4.png";
+import e3 from "@/assets/e3.png";
+import e3_1 from "@/assets/itw.png";
+import e3_2 from "@/assets/itw3.png";
+import e3_3 from "@/assets/itw4.png";
+import e4 from "@/assets/e4.png";
+import e4_1 from "@/assets/e4_1.png";
+import e4_2 from "@/assets/e4_2.png";
+import e4_3 from "@/assets/e4_3.png";
+import e4_5 from "@/assets/e4_5.png";
 
 export default {
   data() {
@@ -113,7 +124,7 @@ export default {
         {
           title: "Excelsior Website Team - UI/UX",
           date: "March 2023",
-          imageUrl: itw2,
+          imageUrl: e1,
           description:
             "Joining the Excelsior Website Team as a UI/UX designer was an incredible opportunity that expanded my skills and understanding of user-centric design. " +
             "I worked closely with a dynamic team to conceptualize, prototype, and implement intuitive interfaces. " +
@@ -123,7 +134,7 @@ export default {
         {
           title: "ARA 5.0 - Staff of Design and Documentation",
           date: "October 2023 - May 2024",
-          imageUrl: idcard,
+          imageUrl: e2,
           description:
             "As a member of the Design and Documentation team at ARA 5.0, I played a critical role in crafting the visual identity of the event. " +
             "This involved creating promotional materials, designing event guides, and documenting key moments to preserve memories. " +
@@ -133,7 +144,7 @@ export default {
         {
           title: "HMIT - Staff of Media Information",
           date: "February 2024 - Now",
-          imageUrl: "https://via.placeholder.com/352x500",
+          imageUrl: e3,
           description:
             "Being a part of the Media Information team at HMIT has been a rewarding journey where I’ve contributed to the creation of engaging and informative content. " +
             "My responsibilities include designing eye-catching visuals for social media, writing compelling captions, and strategizing ways to boost audience engagement. " +
@@ -143,7 +154,7 @@ export default {
         {
           title: "HMIT Website Team - UI/UX",
           date: "June 2024 - August 2024",
-          imageUrl: "https://via.placeholder.com/352x500",
+          imageUrl: e4_5,
           description:
             "As a UI/UX designer for the HMIT Website Team, I was tasked with enhancing the user experience of the organization’s website. " +
             "My role involved analyzing user feedback, identifying pain points, and implementing design improvements to make navigation more seamless and intuitive. " +
@@ -192,10 +203,14 @@ export default {
   methods: {
     openModal(index) {
       this.currentImageIndex = 0; // Set ke gambar pertama dari array
-      if (this.experiences[index].imageUrl === idcard) {
-        this.currentImageArray = [itcare, itw3, idcard];
-      } else if (this.experiences[index].imageUrl === itw2) {
-        this.currentImageArray = [itw, itw3, itw4];
+      if (this.experiences[index].imageUrl === e2) {
+        this.currentImageArray = [e2_1, e2_2, e2_3, e2_4];
+      } else if (this.experiences[index].imageUrl === e3) {
+        this.currentImageArray = [e3_1, e3_2, e3_3];
+      } else if (this.experiences[index].imageUrl === e1) {
+        this.currentImageArray = [e1, e1_1, e1_2];
+      } else if (this.experiences[index].imageUrl === e4) {
+        this.currentImageArray = [e4_5, e4_1, e4_2, e4_3];
       } else {
         this.currentImageArray = [this.experiences[index].imageUrl]; // Gambar tunggal untuk pengalaman lainnya
       }
@@ -280,6 +295,17 @@ export default {
 .experience-card {
   scroll-snap-align: start;
   flex: 0 0 auto;
+  position: relative; /* Ensure that child elements are positioned correctly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-image:hover {
+  transform: scale(1.01); /* Slightly zoom in on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add shadow to give a "lift" effect */
+}
+
+.experience-image {
+  transition: transform 0.3s ease; /* Smooth transition for image */
 }
 
 /* Menyembunyikan scrollbar */
