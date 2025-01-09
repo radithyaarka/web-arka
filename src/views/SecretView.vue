@@ -119,6 +119,9 @@
               </swiper-slide>
             </swiper>
           </div>
+          <Transition data-aos="fade-up">
+            <Message />
+          </Transition>
         </div>
       </div>
     </transition>
@@ -135,7 +138,6 @@ import Spotify from "../components/Spotify.vue";
 import Message from "@/components/Message.vue";
 import Counter from "@/components/Counter.vue";
 import Bijou from "@/components/Bijou.vue";
-
 
 import p1 from "@/assets/secret/p1.jpg";
 import p2 from "@/assets/secret/p2.jpg";
@@ -170,21 +172,32 @@ export default {
       photos: [
         { url: p1, alt: "Image 1", text: "uniqlooo" },
         { url: p2, alt: "Image 2", text: "cute fotonya" },
-        { url: p3, alt: "Image 3", text: "lupa take kapan, tapi lucu hehe"},
-        { url: p4, alt: "Image 4", text: "very zoom :o"},
-        { url: p5, alt: "Image 5", text: "jahimmm"},
-        { url: p6, alt: "Image 6", text: "last meet di smst 4(?)"},
-        { url: p7, alt: "Image 7", text: "legoo"},
-        { url: p8, alt: "Image 8", text: "alma boboo"},
-        { url: p9, alt: "Image 9", text: "balonbalonbalonbalon"},
-        { url: p10, alt: "Image 10", text: "hehe ini lucu"},
-        { url: p11, alt: "Image 11", text: "lego lagii"},
-        { url: p12, alt: "Image 12", text: "cutecutecuteee"},
-        { url: p13, alt: "Image 13", text: "gelang couplee, tapi punyamu rusak 😔"},
-        { url: p14, alt: "Image 14", text: "dirangkulll almaa EHEHEHE aku suka"},
-        { url: p15, alt: "Image 15", text: "lucuu, kek estetik gimana gitu hehehe"},
-        { url: p16, alt: "Image 16", text: "lucu hehehe"},
-
+        { url: p3, alt: "Image 3", text: "lupa take kapan, tapi lucu hehe" },
+        { url: p4, alt: "Image 4", text: "very zoom :o" },
+        { url: p5, alt: "Image 5", text: "jahimmm" },
+        { url: p6, alt: "Image 6", text: "last meet di smst 4(?)" },
+        { url: p7, alt: "Image 7", text: "legoo" },
+        { url: p8, alt: "Image 8", text: "alma boboo" },
+        { url: p9, alt: "Image 9", text: "balonbalonbalonbalon" },
+        { url: p10, alt: "Image 10", text: "hehe ini lucu" },
+        { url: p11, alt: "Image 11", text: "lego lagii" },
+        { url: p12, alt: "Image 12", text: "cutecutecuteee" },
+        {
+          url: p13,
+          alt: "Image 13",
+          text: "gelang couplee, tapi punyamu rusak 😔",
+        },
+        {
+          url: p14,
+          alt: "Image 14",
+          text: "dirangkulll almaa EHEHEHE aku suka",
+        },
+        {
+          url: p15,
+          alt: "Image 15",
+          text: "lucuu, kek estetik gimana gitu hehehe",
+        },
+        { url: p16, alt: "Image 16", text: "lucu hehehe" },
       ],
       clickCount: 0,
       isGalleryUnlocked: false,

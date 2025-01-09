@@ -242,11 +242,11 @@ export default {
 }
 
 .animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
+  animation: spin-slow 10s linear infinite;
 }
 
 .animate-spin-slow-reverse {
-  animation: spin-slow-reverse 20s linear infinite;
+  animation: spin-slow-reverse 10s linear infinite;
 }
 
 .hover\:animate-spin-fast:hover {
