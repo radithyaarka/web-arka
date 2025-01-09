@@ -110,7 +110,7 @@
                   >
                     <img :src="photo.url" :alt="photo.alt" />
                     <div
-                      class="text-overlay absolute bottom-0 left-0 w-full bg-[#f76c88] bg-opacity-90 p-4 rounded-b-xl text-white"
+                      class="text-overlay absolute bottom-0 left-0 w-full bg-[#ffcdd2] bg-opacity-90 p-4 rounded-b-xl text-black"
                     >
                       {{ photo.text }}
                     </div>
@@ -346,17 +346,6 @@ img {
   opacity: 1;
 }
 
-.love-emoticon-wrapper {
-  position: absolute;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.love-emoticon-wrapper img {
-  width: 24px;
-  height: 24px;
-}
-
 @keyframes fadeInOut {
   0% {
     opacity: 0;
@@ -370,7 +359,14 @@ img {
 }
 
 .love-emoticon-wrapper {
+  position: absolute;
+  opacity: 1;
   animation: fadeInOut 2s ease-in-out;
+}
+
+.love-emoticon-wrapper img {
+  width: 24px;
+  height: 24px;
 }
 
 #locked {
