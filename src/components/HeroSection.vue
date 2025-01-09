@@ -22,15 +22,11 @@
           <div class="glass-card text-center p-6">
             <h3 class="text-lg text-black font-semibold mb-4">Best Skill On</h3>
             <div class="flex justify-center gap-4 text-white">
-              <i class="icon bg-gray-800 rounded-full p-3">
-                <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Figma" class="w-6 h-6">
-              </i>
-              <i class="icon bg-gray-800 rounded-full p-3">
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Adobe XD" class="w-6 h-6">
-              </i>
-              <i class="icon bg-gray-800 rounded-full p-3">
-                <img src="https://cdn-icons-png.flaticon.com/512/906/906343.png" alt="Photoshop" class="w-6 h-6">
-              </i>
+              <i class="fab fa-figma bg-gray-800 rounded-full p-3"></i>
+              <i class="fab fa-python  bg-gray-800 rounded-full p-3"></i>
+              <i class="fab fa-html5 bg-gray-800 rounded-full p-3"></i>
+              <i class="fab fa-css3 bg-gray-800 rounded-full p-3"></i>
+              <i class="fab fa-js bg-gray-800 rounded-full p-3"></i>
             </div>
           </div>
         </div>
@@ -189,5 +185,3 @@ export default {
   }
 }
 </style>
-
-
