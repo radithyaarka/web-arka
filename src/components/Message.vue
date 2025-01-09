@@ -1,6 +1,10 @@
 <template>
   <div class="flex justify-center items-center min-h-screen mt-[100px] bg-none">
-    <div class="glass-card bg-none flex rounded-lg shadow-lg w-4/5">
+    <!-- Card yang tertutup -->
+    <div
+      v-if="isCardOpen"
+      class="glass-card bg-none flex rounded-lg shadow-lg w-4/5"
+    >
       <!-- Gambar -->
       <div class="flex-shrink-0 bg-gray-300 w-64 h-72 rounded-lg flex">
         <img
@@ -12,9 +16,7 @@
 
       <!-- Konten Teks -->
       <div class="ml-6">
-        <h2
-          class="text-white text-xl font-bold mb-4 text-left"
-        >
+        <h2 class="text-white text-xl font-bold mb-4 text-left">
           a message from arka
         </h2>
         <p class="text-white text-sm leading-relaxed text-justify">
@@ -46,7 +48,7 @@
           hari kita jalan bareng, ngobrol, ketawa, kadang malah cuma duduk diem
           bareng. Kita mulai kirim pap-pap, even tho sekarang sih udah jarang
           (hehe, abisni mau pap yang banyak 👉👈). trus, sempet juga video call
-          yang seneng-seneng, ngobrol ngobrol random sambil liatin kamu. seru
+          yang seneng-senang, ngobrol ngobrol random sambil liatin kamu. seru
           tau ngobrol sambil liatin someone that pretty HEHEHE. tapi after that
           malah gapernah lagi (sedihhhhhhh😔). then lama lama kita sering
           berantem, then abis berantem bucin lagi, kadang kayak ga jelas.
@@ -73,16 +75,50 @@
         </p>
       </div>
     </div>
+
+    <!-- Form untuk membuka card -->
+    <div v-else class="flex justify-center items-center w-full">
+      <div class="flex space-x-4 w-1/2">
+        <input
+          type="text"
+          v-model="inputValue"
+          class="bg-transparent text-white border-b-2 border-white focus:outline-none focus:border-blue-400 placeholder-white text-lg w-full p-3 rounded-md"
+          placeholder="isi form dulu bro kalo mau lanjut"
+          @keyup.enter="checkInput"
+        />
+        <button
+          @click="checkInput"
+          class="bg-[#ffcdd2] text-black p-3 rounded-md hover:bg-[#c49297] transition-colors"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Message",
+  data() {
+    return {
+      isCardOpen: false,
+      inputValue: "",
+    };
+  },
+  methods: {
+    checkInput() {
+      if (this.inputValue === "arka jago valo") {
+        this.isCardOpen = true;
+      } else {
+        alert("sok tau jir passwordnya");
+      }
+    },
+  },
 };
 </script>
 
-<style>
+<style scoped>
 .glass-card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);

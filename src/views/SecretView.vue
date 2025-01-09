@@ -119,6 +119,9 @@
               </swiper-slide>
             </swiper>
           </div>
+          <transition data-aos="fade-up">
+            <Form />
+          </transition>
           <Transition data-aos="fade-up">
             <Message />
           </Transition>
@@ -134,6 +137,7 @@ import "swiper/swiper-bundle.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Journey from "../components/Journey.vue";
+import Form from "../components/Form.vue";
 import Spotify from "../components/Spotify.vue";
 import Message from "@/components/Message.vue";
 import Counter from "@/components/Counter.vue";
@@ -162,6 +166,7 @@ export default {
     Swiper,
     SwiperSlide,
     Message,
+    Form,
     Spotify,
     Counter,
     Bijou,
