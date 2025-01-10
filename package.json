@@ -28,6 +28,6 @@
     "@vitejs/plugin-vue": "^4.3.4",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29",
-    "vite": "^6.0.7"
+    "vite": "^4.5.5"
   }
 }
