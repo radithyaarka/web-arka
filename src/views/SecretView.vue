@@ -310,13 +310,12 @@ export default {
 }
 .image-container {
   position: relative;
-  width: 500px;
+  width: 480px;
   height: 500px;
-  max-width: 400px;
   margin: 0 auto;
   overflow: hidden;
   background-color: #fff; /* White background to mimic the Polaroid frame */
-  padding: 20px; /* Padding to create a frame around the image */
+  padding: 15px; /* Padding to create a frame around the image */
   border-radius: 15px; /* Rounded corners for the Polaroid effect */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow to lift the card */
   transition: transform 0.3s ease-in-out;
