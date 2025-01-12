@@ -99,28 +99,28 @@
 </template>
 
 <script>
-import e1 from "@/assets/e1.png";
+import e1 from "@/assets/e1.jpg";
 import e1_1 from "@/assets/e1_1.png";
 import e1_2 from "@/assets/e1_2.png";
-import e2 from "@/assets/e2.png";
-import e2_1 from "@/assets/e2_1.png";
+import e2 from "@/assets/e2.jpg";
+import e2_1 from "@/assets/e2_1.jpg";
 import e2_2 from "@/assets/e2_2.png";
-import e2_3 from "@/assets/e2_3.png";
-import e2_4 from "@/assets/e2_4.png";
-import e3 from "@/assets/e3.png";
-import e3_1 from "@/assets/itw.png";
-import e3_2 from "@/assets/itw3.png";
-import e3_3 from "@/assets/itw4.png";
-import e4 from "@/assets/e4.png";
+import e2_3 from "@/assets/e2_3.jpg";
+import e2_4 from "@/assets/e2_4.jpg";
+import e3 from "@/assets/e3.jpg";
+import e3_1 from "@/assets/itw.jpg";
+import e3_2 from "@/assets/itw3.jpg";
+import e3_3 from "@/assets/itw4.jpg";
+import e4 from "@/assets/e4.jpg";
 import e4_1 from "@/assets/e4_1.png";
 import e4_2 from "@/assets/e4_2.png";
 import e4_3 from "@/assets/e4_3.png";
-import e4_5 from "@/assets/e4_5.png";
-import e5 from "@/assets/e5.png";
-import e5_1 from "@/assets/e5_1.png";
-import e5_2 from "@/assets/e5_2.png";
-import e5_3 from "@/assets/e5_3.png";
-import e5_4 from "@/assets/e5_4.png";
+import e4_5 from "@/assets/e4_5.jpg";
+import e5 from "@/assets/e5.jpg";
+import e5_1 from "@/assets/e5_1.jpg";
+import e5_2 from "@/assets/e5_2.jpg";
+import e5_3 from "@/assets/e5_3.jpg";
+import e5_4 from "@/assets/e5_4.jpg";
 
 export default {
   data() {
