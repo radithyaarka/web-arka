@@ -152,7 +152,7 @@ export default {
 
 <style scoped>
 .main-container {
-  background-image: url("@/assets/bg2.png");
+  background-image: url("@/assets/bg2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
