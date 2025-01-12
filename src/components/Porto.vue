@@ -43,14 +43,14 @@
 </template>
 
 <script>
-import itcare from "@/assets/itcare.png";
-import itcare2 from "@/assets/itcare2.png";
-import itw1 from "@/assets/itw.png";
-import itw2 from "@/assets/itw2.png";
-import itw3 from "@/assets/itw3.png";
-import itw4 from "@/assets/itw4.png";
-import itgc from "@/assets/itgc.png";
-import celebrait from "@/assets/celebrait.png";
+import itcare from "@/assets/itcare.jpg";
+import itcare2 from "@/assets/itcare2.jpg";
+import itw1 from "@/assets/itw.jpg";
+import itw2 from "@/assets/itw2.jpg";
+import itw3 from "@/assets/itw3.jpg";
+import itw4 from "@/assets/itw4.jpg";
+import itgc from "@/assets/itgc.jpg";
+import celebrait from "@/assets/celebrait.jpg";
 
 import "aos/dist/aos.css";
 
