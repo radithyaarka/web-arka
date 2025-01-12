@@ -49,6 +49,8 @@
               :src="timelineData[activeIndex].image"
               alt="Main Timeline Image"
               class="timeline-image transition-all duration-1000"
+              :class="{ loaded: imageLoaded }"
+              @load="onImageLoad"
             />
           </div>
           <div
@@ -137,11 +139,15 @@ export default {
         },
       ],
       activeIndex: 0, // Set the first item as active by default
+      imageLoaded: false, // Track if image has loaded
     };
   },
   methods: {
     activateGlow(index) {
       this.activeIndex = index; // Set the clicked item's index as active
+    },
+    onImageLoad() {
+      this.imageLoaded = true; // Set imageLoaded to true when image is fully loaded
     },
   },
 };
@@ -152,6 +158,12 @@ export default {
   width: 100%;
   height: 100%; /* Pastikan gambar mengisi seluruh kartu */
   object-fit: cover; /* Potong gambar jika terlalu besar untuk menjaga proporsi */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.timeline-image.loaded {
+  opacity: 1; /* Menampilkan gambar setelah dimuat */
 }
 
 .image-container {

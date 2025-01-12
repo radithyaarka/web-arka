@@ -218,9 +218,6 @@ export default {
     this.$nextTick(() => {
       AOS.refresh();
     });
-
-    // Preload all the images for the gallery
-    this.preloadImages();
   },
   methods: {
     incrementClickCount() {
@@ -259,16 +256,9 @@ export default {
         this.emoticons.shift();
       }, 2000);
     },
-    preloadImages() {
-      this.photos.forEach(photo => {
-        const img = new Image();
-        img.src = photo.url;
-      });
-    },
   },
 };
 </script>
-
 
 <style scoped>
 .bg-custom {
